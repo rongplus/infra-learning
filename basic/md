@@ -1,0 +1,4 @@
+find ~/ -type f -name "postgis-2.0.0"
+
+ grep -rl "string" /path
+ 

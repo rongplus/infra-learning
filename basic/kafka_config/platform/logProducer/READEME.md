@@ -1,0 +1,1 @@
+//.\protoc.exe  -I=D:\git\rong.plus\DFSBlog\platform\logProducer --python_out=d:\testfolder\testProto D:\git\rong.plus\DFSBlog\platform\logProducer\sysinfo.proto

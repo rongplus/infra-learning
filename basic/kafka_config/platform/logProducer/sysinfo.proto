@@ -1,0 +1,14 @@
+
+syntax = "proto3";
+
+package SIPackage;
+
+
+message Status {
+  optional string ip = 1;
+  optional int32 cpu = 2;
+  optional string email = 3;
+  optional int32 momery = 4;
+
+}
+
