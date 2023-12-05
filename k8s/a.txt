@@ -1,0 +1,144 @@
+    1  sudo apt update list
+    2  su root
+    3  sudo apt update list
+    4  su root
+    5  sudo apt update list
+    6  sudo apt update 
+    7  apt install openssh-server
+    8  sudo apt install openssh-server
+    9  ip a
+   10  sudo nano /etc/hostname
+   11  sudo nano /etc/hosts
+   12  scp /etc/hosts rong@k8s-master1:/etc/hosts
+   13  sudo scp /etc/hosts rong@k8s-master2:/etc/hosts
+   14  sudo reboot
+   15  ip a
+   16  sudo nano /etc/hosts
+   17  logout
+   18  sudo nano /etc/hosts
+   
+   19  sudo nano /k8s/etcd/cfg/etcd.conf
+   20  cp /k8s/etcd/etcd.service /usr/lib/systemd/system/
+   21  sudo cp /k8s/etcd/etcd.service /usr/lib/systemd/system/
+   22  systemctl daemon-reload
+   23  systemctl start etcd
+   24  cd /k8s/etcd/
+   25  ls
+   26  sudo nano etcd.service 
+   27  cd cfg/
+   28  ls
+   29  sudo systemctl start etcd
+   30  systemctl status etcd.service
+   31  tail -f /var/log/messages
+   32  cd ../..
+   33  sudo   curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/arm64/kubectl"
+   34  sudo   curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/arm64/kubectl.sha256"
+   35  echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
+   36  sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+   37  kubectl version --client
+   38  ls /usr/local/bin
+   39  cd /usr/local/bin
+   40  ./kubectl 
+   41  $ sudo apt-get install docker.io
+   42  docker --version
+   43  sudo usermod -aG docker $USER
+   44  sudo systemctl start docker
+   45  sudo systemctl enable docker
+   46  sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B53DC80D13EDEF05
+   47  sudo apt-get update
+   48  docker --version
+   49  sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
+   50  sudo apt-get install kubeadm kubelet kubectl
+   51  sudo apt-mark hold kubeadm kubelet kubectl
+   52  kubeadm version
+   53  sudo swapoff -a
+   54  sudo hostnamectl set-hostname k8s-master1
+   55  hostnamectl
+   56  sudo grep cidr /etc/kubernetes/manifests/kube-*
+   57  ls
+   58  cd  /etc/kubernetes
+   59  ls
+   60  cd manifests/
+   61  ls
+   62  sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+   63  sudo nano /etc/modules-load.d/containerd.conf
+   64  sudo modprobe overlay
+   65  sudo modprobe br_netfilter
+   66  sudo nano /etc/sysctl.d/kubernetes.conf
+   67  sudo sysctl --system
+   68  sudo nano /etc/default/kubelet
+   69  systemctl daemon-reload
+   70  systemctl restart kubelet
+   71  sudo nano /etc/docker/daemon.json
+   72  systemctl daemon-reload
+   73  systemctl restart docker
+   74  sudo nano /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+   75  systemctl daemon-reload
+   76  systemctl restart kubelet
+   77  sudo kubeadm init --control-plane-endpoint=k8s-master1 --upload-certs
+   78  mkdir -p $HOME/.kube
+   79  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+   80  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+   81  kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+   82  kubectl
+   83  sudo apt install kubeadm kubelet kubectl
+   84  kubectl
+   85  kubeadm
+   86  kubelet
+   87  kubectl
+   88  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+   89  ls
+   90  chmod +x kubectl
+   91  kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+   92  where is kubectl
+   93  which is kubectl
+   94  cd /usr/local/bin
+   95  sudo  chmod +x kubectl
+   96  kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+   97  ls
+   98  ./kubectl 
+   99  sudo apt install kubectl
+  100  ./kubectl 
+  101  sudo apt update
+  102  sudo snap install kubectl --classic
+  103  ./kubectl 
+  104  kubectl 
+  105  kubectl version --output=yaml
+  106  kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+  107  sudo reboot
+  108  kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+  109  uname -m
+  110  echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
+  111  uname -m
+  112  echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
+  113  sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+  114  chmod +x kubectl
+  115  mkdir -p ~/.local/bin
+  116  mv ./kubectl ~/.local/bin/kubectl
+  117  kubectl
+  118  kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+  119  kubectl get nodes
+  120  kubectl taint nodes --all node-role.kubernetes.io/control-plane-
+  121  kubectl get nodes
+  122  sudo nano /etc/hosts
+  123  ./kubectl 
+  124  kubectl get pods
+  125  kubectl pod get
+  126  kubectl top get
+  127  kubectl get nodes
+  128  history
+  129  kubeadm
+  130  kubeadm version
+  131  kubeadm
+  132  kubectl get nodes
+  133  kubeadm init phase upload-certs --upload-certs`
+  134  kubeadm init phase upload-certs --upload-certs
+  135  sudo kubeadm init phase upload-certs --upload-certs
+  136  kubectl get nodes
+  137  sudo kubeadm init --control-plane-endpoint=[master-hostname] --upload-certs
+  138  /etc/containerd
+  139  nano /etc/containerd/config.toml
+  140  cd /etc/containerd
+  141  containerd config dump
+  142  containerd
+  143  history >> a.txt

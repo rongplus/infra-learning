@@ -1,0 +1,15 @@
+127.0.0.1	localhost
+127.0.1.1	k8s-master.myguest.virtualbox.org	k8s-master
+192.168.56.111  k8s-master1
+192.168.56.114  k8s-master2
+192.168.56.112  k8s-node1
+192.168.56.113  k8s-node2
+192.168.56.115  k8s-lb1
+192.168.56.116  k8s-lb1
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters

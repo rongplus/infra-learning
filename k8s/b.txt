@@ -1,0 +1,88 @@
+    1  sudo apt update list
+    2  su root
+    3  sudo apt update list
+    4  su root
+    5  sudo apt update list
+    6  sudo apt update 
+    7  apt install openssh-server
+    8  sudo apt install openssh-server
+    9  ip a
+   10  sudo nano /etc/hostname
+   11  sudo nano /etc/hosts
+   12  sudo  reeboooot
+   13  sudoebo[
+   14  sudo reboot
+   15  ip a
+   16  sudo nano /etc/hosts
+   17  sudo apt update
+   18  sudo apt install docker.io -y
+   19  sudo systemctl enable docker
+   20  sudo systemctl status docker
+   21  curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo tee /usr/share/keyrings/kubernetes.gpg
+   22  sudo sudo apt  install curl
+   23  sudo curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo tee /usr/share/keyrings/kubernetes.gpg
+   24  sudo echo "deb [arch=amd64 signed-by=/usr/share/keyrings/kubernetes.gpg] http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list
+   25  sudo apt install kubeadm kubelet kubectl
+   26  echo "deb [arch=amd64 signed-by=/usr/share/keyrings/kubernetes.gpg] http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list
+   27  sudo apt install kubeadm kubelet kubectl
+   28  sudo apt update
+   29  sudo apt install kubeadm kubelet kubectl
+   30  echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
+   31  sudo apt install kubeadm kubelet kubectl
+   32  nc 127.0.0.1 6443
+   33  kubeadm
+   34  sudo apt-get update
+   35  # apt-transport-https may be a dummy package; if so, you can skip that package
+   36  sudo apt-get install -y apt-transport-https ca-certificates curl
+   37  sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
+   38  sudo apt update
+   39  sudo apt install kubeadm kubelet kubectl
+   40  pwd
+   41  cd  /etc/apt
+   42  ls
+   43  sudo mv sources.list sources-1.list
+   44  cd /
+   45  sudo apt install kubeadm kubelet kubectl
+   46  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/kubernetes-xenial.gpg
+   47  sudo apt install kubeadm kubelet kubectl
+   48  apt update
+   49  sudo apt update
+   50  sudo apt install kubeadm kubelet kubectl
+   51  echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+   52  curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+   53  sudo apt-get update
+   54  cat <<EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
+[kubernetes]
+name=Kubernetes
+baseurl=https://pkgs.k8s.io/core:/stable:/v1.28/rpm/
+enabled=1
+gpgcheck=1
+gpgkey=https://pkgs.k8s.io/core:/stable:/v1.28/rpm/repodata/repomd.xml.key
+exclude=kubelet kubeadm kubectl cri-tools kubernetes-cni
+EOF
+
+   55  sudo apt-get update
+   56  sudo apt install kubeadm kubelet kubectl
+   57  apt install socat
+   58  sudo apt install socat
+   59  apt install socat
+   60  sudo apt install socat
+   61  sudo apt install kubeadm kubelet kubectl
+   62  kubeadm version
+   63  sudo swapoff -a
+   64  sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+   65  sudo nano /etc/modules-load.d/containerd.conf
+   66  sudo modprobe overlay
+   67  sudo modprobe br_netfilter
+   68  sudo nano /etc/sysctl.d/kubernetes.conf
+   69  sudo sysctl --system
+   70  sudo kubeadm join k8s-master1:6443 --token pm2o71.2hm7szo8snb4ivwi         --discovery-token-ca-cert-hash sha256:348773bf747025c841ab15c092e5985910df2de658aef236d89a3e8c45a79929         --control-plane --certificate-key a02d78f85d7b4f5f378fb49e3096ee59097ef6d1cfecb981a1bafcae684e3b92
+   71  cd /etc/containerd
+   72  containerd
+   73  history
+   74  history >> b.txt
+   75  pwdhistory >> b.txt
+   76  pwd
+   77  cd /home/rong
+   78  pwdhistory >> b.txt
+   79  history >> b.txt
